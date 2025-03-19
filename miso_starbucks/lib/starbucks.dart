@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:miso_starbucks/app_color.dart';
+import 'package:miso_starbucks/starbucks/starbucks_first_page.dart';
+import 'package:miso_starbucks/starbucks/starbucks_second_page.dart';
+import 'package:miso_starbucks/starbucks/starbucks_third_page.dart';
 
 class Starbucks extends StatefulWidget {
   const Starbucks({Key? key}) : super(key: key);
@@ -51,111 +54,5 @@ class _StarbucksState extends State<Starbucks> {
         ],
       ),
     );
-  }
-}
-
-/// 첫 번째 페이지
-class StarbucksFirstPage extends StatelessWidget {
-  const StarbucksFirstPage({Key? key}) : super(key: key);
-
-  /// 배경 이미지 URL
-  final String backImg =
-      "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-bg.png";
-
-  /// Frequency 이미지 URL
-  final String frequencyImg =
-      "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-frequency.png";
-
-  /// 추천 메뉴
-  final List<Map<String, String>> recommendMenu = const [
-    {
-      "name": "돌체쿠키라떼",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu1.jpg",
-    },
-    {
-      "name": "아이스 홀리데이 돌체 쿠키 라떼",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/ic/2/starbucks-menu2.jpg",
-    },
-    {
-      "name": "스노우 민트 초콜릿",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu3.jpg",
-    },
-    {
-      "name": "아이스 스노우 민트 초콜릿",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu4.jpg",
-    },
-    {
-      "name": "스노우 민트 초콜릿 블렌디드",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu5.jpg",
-    },
-  ];
-
-  /// 크리스마스 이벤트 이미지 URL
-  final String eventImg =
-      "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-christmas.jpg";
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(child: Text("Starbucks 첫 번째 페이지")),
-    );
-  }
-}
-
-/// 두 번째 페이지
-class StarbucksSecondPage extends StatelessWidget {
-  const StarbucksSecondPage({Key? key}) : super(key: key);
-
-  /// 카드 이미지
-  final String cardImgUrl =
-      "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-card.png";
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Starbucks 두 번째 페이지")));
-  }
-}
-
-/// 세 번째 페이지
-class StarbucksThirdPage extends StatelessWidget {
-  const StarbucksThirdPage({Key? key}) : super(key: key);
-
-  /// 전체 메뉴
-  final List<Map<String, String>> menu = const [
-    {
-      "ko": "추천",
-      "en": "Recommend",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu1.jpg",
-    },
-    {
-      "ko": "리저브 에스프레소",
-      "en": "Reserve Espresso",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/ic/2/starbucks-menu2.jpg",
-    },
-    {
-      "ko": "리저브 드립",
-      "en": "Reserve Drip",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu3.jpg",
-    },
-    {
-      "ko": "콜드브루",
-      "en": "ColdBrew",
-      "imgUrl":
-          "https://devclass.devstory.co.kr/flutter-basic/2/starbucks-menu4.jpg",
-    },
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("Starbucks 세 번째 페이지")));
   }
 }
